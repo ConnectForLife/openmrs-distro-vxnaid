@@ -54,6 +54,7 @@ create_database_user=false
 module_web_admin=${MODULE_WEB_ADMIN}
 create_tables=${DB_CREATE_TABLES}
 auto_update_database=${DB_AUTO_UPDATE}
+hibernate.c3p0.max_size=100
 EOF
 
 cat > /usr/local/tomcat/.OpenMRS/biometric-runtime.properties << EOF
@@ -111,6 +112,8 @@ if [ -f "/usr/local/tomcat/.OpenMRS/openmrs-runtime.properties" ]; then
   grep -qxF "hibernate.cache.use_second_level_cache=false" /usr/local/tomcat/.OpenMRS/openmrs-runtime.properties || echo "hibernate.cache.use_second_level_cache=false" >> /usr/local/tomcat/.OpenMRS/openmrs-runtime.properties
   grep -qxF "hibernate.cache.use_query_cache=false" /usr/local/tomcat/.OpenMRS/openmrs-runtime.properties || echo "hibernate.cache.use_query_cache=false" >> /usr/local/tomcat/.OpenMRS/openmrs-runtime.properties
   grep -qxF "hibernate.cache.auto_evict_collection_cache=false" /usr/local/tomcat/.OpenMRS/openmrs-runtime.properties || echo "hibernate.cache.auto_evict_collection_cache=false" >> /usr/local/tomcat/.OpenMRS/openmrs-runtime.properties
+
+  echo "hibernate.c3p0.max_size=100" >> /usr/local/tomcat/.OpenMRS/openmrs-runtime.properties
 fi
 
 # bring tomcat process to foreground again
