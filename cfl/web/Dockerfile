@@ -1,4 +1,4 @@
-FROM tomcat:7-jre8
+FROM tomcat:7-jdk8
 
 RUN rm -rf /usr/local/tomcat/webapps/ROOT
 ADD ./ROOT /usr/local/tomcat/webapps/ROOT
