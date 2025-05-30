@@ -111,6 +111,8 @@ if [ -f "/usr/local/tomcat/.OpenMRS/openmrs-runtime.properties" ]; then
   grep -qxF "hibernate.cache.use_second_level_cache=false" /usr/local/tomcat/.OpenMRS/openmrs-runtime.properties || echo "hibernate.cache.use_second_level_cache=false" >> /usr/local/tomcat/.OpenMRS/openmrs-runtime.properties
   grep -qxF "hibernate.cache.use_query_cache=false" /usr/local/tomcat/.OpenMRS/openmrs-runtime.properties || echo "hibernate.cache.use_query_cache=false" >> /usr/local/tomcat/.OpenMRS/openmrs-runtime.properties
   grep -qxF "hibernate.cache.auto_evict_collection_cache=false" /usr/local/tomcat/.OpenMRS/openmrs-runtime.properties || echo "hibernate.cache.auto_evict_collection_cache=false" >> /usr/local/tomcat/.OpenMRS/openmrs-runtime.properties
+
+ grep -qxF "hibernate.c3p0.checkoutTimeout=60000" /usr/local/tomcat/.OpenMRS/openmrs-runtime.properties || echo "hibernate.c3p0.checkoutTimeout=60000" >> /usr/local/tomcat/.OpenMRS/openmrs-runtime.properties
 fi
 
 # bring tomcat process to foreground again
