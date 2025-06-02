@@ -3,4 +3,4 @@ version: '2'
 services:
   web:
     build: web
-    image: openmrsvxnaid-vrvu:4.1.63
+    image: openmrsvxnaid-vrvu:4.1.64
