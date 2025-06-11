@@ -17,8 +17,6 @@ COPY ocl /opt/openmrs-ocl
 # TOMCAT_NATIVE_LIBDIR=/usr/local/tomcat/native-jni-lib is set by the tomcat:7-jre8 image
 COPY neurotech/lib/* /usr/local/tomcat/native-jni-lib/
 
-COPY setenv.sh /usr/local/tomcat/bin/setenv.sh
-
 COPY wait-for-it.sh /usr/local/tomcat/wait-for-it.sh
 COPY startup.sh /usr/local/tomcat/startup.sh
 

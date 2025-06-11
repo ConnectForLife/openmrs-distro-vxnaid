@@ -43,7 +43,7 @@ fi
 
 mkdir -p ~/modules
 
-# Create OpenMRS installation script - see setenv.sh
+# Create OpenMRS installation script - see CATALINA_OPTS
 cat > /usr/local/tomcat/openmrs-server.properties << EOF
 install_method=auto
 connection.url=jdbc\:mysql\://${DB_HOST}\:3306/${DB_DATABASE}?autoReconnect\=true&sessionVariables\=default_storage_engine\=InnoDB&useUnicode\=true&characterEncoding\=UTF-8&useSSL\=false&allowPublicKeyRetrieval\=true
