@@ -2,7 +2,7 @@ version: '2'
 
 services:
   web:
-    image: openmrsvxnaid-vrvu:4.1.74
+    image: openmrsvxnaid-vrvu:4.1.75
     env_file:
       - .env
     volumes:
